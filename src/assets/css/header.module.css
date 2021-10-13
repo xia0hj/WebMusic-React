@@ -1,0 +1,16 @@
+.test {
+    background-color: red;
+}
+
+/* 整个头部 */
+.headerWrapper {
+    width: 100%; /* 占满宽度 */
+    background-color: #242221;
+}
+
+/* 头部中心的内容 */
+.content {
+    display: flex;
+    color:#fff;
+    justify-content: space-between; /* 两端对齐，项目之间的间隔都相等 */
+}

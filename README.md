@@ -16,6 +16,21 @@ https://juejin.cn/post/6894914653479960583
   └─hooks   自定义hook  
 
 
+路由  
+/discover 发现音乐  
+/discover/recommend 推荐  
+/discover/toplist 排行榜  
+/discover/artist 歌手  
+
+/my 我的音乐  
+/my/artist 我的歌手  
+/my/mv 我的视频  
+/my/radio 我的电台  
+/my/playlist 歌单  
+
+/friend 朋友  
+
+
 
 
 

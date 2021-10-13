@@ -1,0 +1,93 @@
+@import url('../../../node_modules/normalize.css/normalize.css');
+
+/* 去掉内外边距 */
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+header,
+menu,
+section,
+p,
+input,
+td,
+th,
+ins {
+  padding: 0;
+  margin: 0;
+}
+
+/* 去掉列表项的标记 */
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/* 去掉链接文本的下划线 */
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+/* 鼠标放在链接上展示下划线 */
+a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+/* em是强调标签，会将文本变成斜体，这里改成默认样式 */
+i,
+em {
+  font-style: normal;
+}
+
+/* 输入框，按钮，下拉选择菜单，链接去掉边框和获得焦点时的虚线边框 */
+input,
+textarea,
+button,
+select,
+a {
+  outline: none;
+  border: none;
+}
+
+/* 合并表格的边框 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 去掉图片的边框，以及通过垂直居中去掉图片底部的空白 */
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+/* 字体和颜色 */
+body,
+textarea,
+select,
+input,
+button {
+  font-size: 12px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* 外边距为0，auto有水平居中效果 */
+.w1100 {
+  width: 1100px;
+  margin: 0 auto;
+}

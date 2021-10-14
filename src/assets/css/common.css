@@ -85,9 +85,3 @@ button {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f5f5f5;
 }
-
-/* 外边距为0，auto有水平居中效果 */
-.w1100 {
-  width: 1100px;
-  margin: 0 auto;
-}

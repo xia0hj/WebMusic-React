@@ -1,3 +1,3 @@
-export default function Footer(props){
+export default function footer(props){
     return <div>Footer</div>;
 }

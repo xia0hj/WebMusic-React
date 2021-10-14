@@ -1,6 +1,9 @@
 react项目学习，照着做一个  
 https://juejin.cn/post/6894914653479960583  
 
+TODO  
+headerLink的NavLink组件不知道为什么activeClassName不能改文本颜色，但activeStyle却可以  
+
 项目结构  
 │─src  
   ├─assets 存放公共资源css和图片  

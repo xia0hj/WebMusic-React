@@ -1,6 +1,4 @@
-.test {
-    background-color: red;
-}
+
 
 /* 整个头部 */
 .headerWrapper {
@@ -11,6 +9,53 @@
 /* 头部中心的内容 */
 .content {
     display: flex;
-    color:#fff;
-    justify-content: space-between; /* 两端对齐，项目之间的间隔都相等 */
+    justify-content: space-between; /* flex布局两端对齐，项目之间的间隔都相等 */
+
+    width: 1100px;
+  margin: 0 auto; /* 外边距为0，auto表示左右自适应距离相等，即水平居中 */
+  color: #fff;
+}
+
+/* 头部内容的左部分 */
+.headerLeft {
+    display: flex;
+}
+
+.logo {
+    display: inline-block;
+    width: 176px;
+    height: 69px;
+    background-position: 0 0; /* logo图片与容器的左上角对齐 */
+    text-indent: -9999px; /* 隐藏文本 */
+    background-image: url(../img/sprite_01.png);
+}
+
+.headerGroup .headerLink{
+  padding: 0 19px;
+  height: 70px;
+  display: inline-block;
+  line-height: 70px;
+  color: #ccc;
+  font-size: 14px;
+}
+.headerGroup .headerLink:hover{
+  text-decoration: none;
+  background-color: #000;
+}
+
+.activeLink{
+  color: #fff;
+  background-color: #000;
+}
+
+
+/* 头部内容的右部分 */
+.headerRight{
+  display: flex;
+}
+
+
+.red_line {
+  height: 5px;
+  background-color: #c20b0b;
 }

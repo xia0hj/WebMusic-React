@@ -1,12 +1,13 @@
-import headerCSS from "../assets/css/header.module.css";
 import "../assets/css/common.css";
+import headerCSS from "../assets/css/header.module.css";
 
-import {headerLinks} from '../common/common-data.js';
+
+import { headerLinks } from '../common/common-data.js';
 import { NavLink } from "react-router-dom";
 
 
 
-export default function header(props) {
+export default function header() {
   return (
     <div className={headerCSS.headerWrapper}>
       <div className={headerCSS.content}>
@@ -14,14 +15,14 @@ export default function header(props) {
           <h1><a href="#/" className={headerCSS.logo}>网易云音乐</a></h1>
           <div className={headerCSS.headerGroup}>
             {
-              headerLinks.map((item, index)=>{
+              headerLinks.map((item, index) => {
                 return returnHeaderLinkItem(item, index);
               })
             }
           </div>
         </div>
         <div className={headerCSS.headerRight}>
-
+          
         </div>
       </div>
       <div className={headerCSS.red_line} />
@@ -29,23 +30,31 @@ export default function header(props) {
   )
 }
 
-const returnHeaderLinkItem = (item, index)=>{
-  // index=0,1,2的是路由
-  if(index<=2){
+/**
+ * 
+ * @param {Object} item
+ * @param {String} item.title
+ * @param {String} item.link
+ * @param {String} item.type
+ * @param {Number} index 
+ */
+const returnHeaderLinkItem = (item, index) => {
+  if (item.type === 'route') {
     return (
       <NavLink
         key={index}
         to={item.link}
         className={headerCSS.headerLink}
         activeClassName={headerCSS.activeLink}
-        activeStyle={{color:'#fff'}}
       >
         <em>{item.title}</em>
+        <div className={headerCSS.arrowhead}></div>
       </NavLink>
     );
   }
-  // index=3,4,...的是外链
-  else{
-
+  else if (item.type === 'blank') {
+    return (
+      <a href={item.link} className={headerCSS.headerLink} target='_blank' rel="noreferrer" >{item.title}</a>
+    );
   }
 };

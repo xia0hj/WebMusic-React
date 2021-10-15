@@ -16,6 +16,8 @@
   color: #fff;
 }
 
+
+
 /* 头部内容的左部分 */
 .headerLeft {
     display: flex;
@@ -30,23 +32,40 @@
     background-image: url(../img/sprite_01.png);
 }
 
-.headerGroup .headerLink{
+.headerLink{
   padding: 0 19px;
   height: 70px;
   display: inline-block;
   line-height: 70px;
   color: #ccc;
   font-size: 14px;
+  position: relative; /* 父元素设为相对定位，子元素小箭头才能用绝对定位 */
 }
-.headerGroup .headerLink:hover{
+.headerLink:hover{
   text-decoration: none;
   background-color: #000;
+  color: #fff;
 }
 
 .activeLink{
   color: #fff;
   background-color: #000;
 }
+
+.activeLink .arrowhead {
+  /* activeLink的子类，让只有选中的才会显示小箭头 */
+  background-image: url(../img/sprite_01.png);
+  background-position: 254px 0;
+  width: 12px;
+  height: 7px;
+  /* 绝对定位将小箭头放在底部居中 */
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+
 
 
 /* 头部内容的右部分 */

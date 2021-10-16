@@ -1,6 +1,6 @@
-import footerCSS from "../assets/css/footer.module.css";
+import footerCSS from "../../assets/css/footer.module.css";
 
-import { footerLinks } from "../common/common-data";
+import { footerLinks } from "../../common/common-data";
 
 export default function footer() {
   return (

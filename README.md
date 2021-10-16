@@ -2,7 +2,13 @@ react项目学习，照着做一个
 https://juejin.cn/post/6894914653479960583  
 
 TODO  
-headerLink的NavLink组件不知道为什么activeClassName不能改文本颜色，但activeStyle却可以  
+头部使用antd搜索框，加上prefix后样式失效，待修复  
+
+
+依赖  
+npm install --save antd
+npm install --save @ant-design/icons  
+
 
 项目结构  
 │─src  

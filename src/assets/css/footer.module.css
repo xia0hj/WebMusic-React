@@ -1,0 +1,49 @@
+.footerWrapper{
+  width: 100%;
+  height: 115px;
+  border-top: 1px solid #d3d3d3;
+  background-color: #f2f2f2;
+  margin-bottom: 53px;
+  display: flex;
+  justify-content: center;
+}
+.footerWrapper .content{
+  width: 980px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+
+
+.footerLeft{
+  width: 520px;
+  padding-top: 15px;
+  line-height: 24px;
+}
+
+.footerLeft .footerLink{
+  color:#999;
+}
+
+.footerLeft .splitLine {
+  margin: 0 8px 0 10px;
+  color: #c2c2c2;
+}
+.footerLink .splitLine:last-of-type{
+  display: none; /* 隐藏最右边的分隔竖线 */
+}
+
+
+
+
+
+
+
+
+
+
+.footerRight{
+
+}

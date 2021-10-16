@@ -1,4 +1,4 @@
-import footerCSS from "../../assets/css/footer.module.css";
+import footerCSS from "./css/footer.module.css"
 
 import { footerLinks } from "../../common/common-data";
 

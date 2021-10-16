@@ -1,9 +1,27 @@
-import navbarCSS from "../../assets/css/discover/navbar.module.css";
+import navbarCSS from "./css/navbar.module.css";
 
-export default function NavBar(){
+import { navbarSelectItems } from "../../common/common-data";
+import { NavLink } from "react-router-dom";
+
+export default function Navbar(){
   return (
     <div className={navbarCSS.navbarWrapper}>
-      
+      <ul className={navbarCSS.navbarSelectList}>
+        {navbarSelectItems.map((item,index)=>returnNavbarSelectItem(item,index))}
+      </ul>
     </div>
   );
 }
+
+const returnNavbarSelectItem = (item, index)=>{
+  return (
+    <NavLink
+      key={index}
+      to={item.link}
+      className={navbarCSS.navbarSelectItem}
+      activeClassName={navbarCSS.activeItem}
+    >
+      <em>{item.title}</em>
+    </NavLink>
+  );
+};

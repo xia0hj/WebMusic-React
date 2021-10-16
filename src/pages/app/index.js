@@ -11,7 +11,8 @@ export default function App() {
             <Header></Header>
             <Switch>
                 <Route exact path='/' component={Discover}></Route>
-                <Route exact path='/discover' component={Discover}></Route>
+                <Route path='/discover' component={Discover}></Route>
+
             </Switch>
             <Footer></Footer>
         </HashRouter>

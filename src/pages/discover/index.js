@@ -1,9 +1,18 @@
 import NavBar from "./navbar";
 
+import { HashRouter, Switch, Route } from "react-router-dom";
 
-export default function discover(){
+import Recommend from "../recommend/index";
+
+
+export default function discover() {
   return (
-    <NavBar></NavBar>
+    <HashRouter>
+      <NavBar></NavBar>
+      <Switch>
+        <Route exact path='/discover/recommend' component={Recommend}></Route>
+      </Switch>
+    </HashRouter>
   )
 }
-  
+

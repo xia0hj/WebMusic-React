@@ -2,7 +2,8 @@ react项目学习，照着做一个
 https://juejin.cn/post/6894914653479960583  
 
 TODO  
-头部使用antd搜索框，加上prefix后样式失效，待修复  
+底部样式未完成  
+发现音乐页面的次级导航栏样式未完成  
 
 
 依赖  
@@ -11,6 +12,18 @@ npm install --save @ant-design/icons
 
 
 项目结构  
+* asset 存放公共资源css和图片  
+  * img 图片  
+  * css 全局css  
+* common 公共数据  
+* pages 页面  
+  * app 启动页面，包括头部导航路由和底部  
+    * css 该页面用到的css
+    * index.js 本页面导出的组件
+  * discover 发现音乐页面，包括次级导航路由  
+  * recommend 发现音乐-推荐页面  
+
+
 │─src  
   ├─assets 存放公共资源css和图片  
     ├─css  全局css  

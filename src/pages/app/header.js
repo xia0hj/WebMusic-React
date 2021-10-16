@@ -1,7 +1,7 @@
 
-import headerCSS from "../../assets/css/header.module.css";
+import headerCSS from "./css/header.module.css";
 
-import { headerSelectItems } from "../../common/common-data"
+import { headerSelectItems } from "../../common/common-data";
 import { NavLink } from "react-router-dom";
 
 import { Input } from "antd";
@@ -16,13 +16,13 @@ export default function header() {
 
         <div className={headerCSS.headerLeft}>
           <h1><a href="#/" className={headerCSS.logo}>网易云音乐</a></h1>
-          <div className={headerCSS.headerGroup}>
+          <ul className={headerCSS.headerGroup}>
             {
               headerSelectItems.map((item, index) => {
                 return returnHeaderSelectItem(item, index);
               })
             }
-          </div>
+          </ul>
         </div>
 
         <div className={headerCSS.headerRight}>
@@ -47,15 +47,17 @@ export default function header() {
 const returnHeaderSelectItem = (item, index) => {
   if (item.type === "route") {
     return (
-      <NavLink
-        key={index}
-        to={item.link}
-        className={headerCSS.headerSelectItem}
-        activeClassName={headerCSS.activeItem}
-      >
-        <em>{item.title}</em>
-        <div className={headerCSS.bottomArrowhead}></div>
-      </NavLink>
+      <li>
+        <NavLink
+          key={index}
+          to={item.link}
+          className={headerCSS.headerSelectItem}
+          activeClassName={headerCSS.activeItem}
+        >
+          <em>{item.title}</em>
+          <div className={headerCSS.bottomArrowhead}></div>
+        </NavLink>
+      </li>
     );
   }
   else if (item.type === "blank") {
@@ -67,7 +69,7 @@ const returnHeaderSelectItem = (item, index) => {
 };
 
 
-const returnSearchbox = ()=>{
+const returnSearchbox = () => {
   return (
     <Input
       className={headerCSS.searchbox}

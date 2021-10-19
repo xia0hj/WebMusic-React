@@ -15,13 +15,16 @@ npm install --save @ant-design/icons
 * asset 存放公共资源css和图片  
   * img 图片  
   * css 全局css  
-* common 公共数据  
+* static 公共静态数据  
 * pages 页面  
-  * app 启动页面，包括头部导航路由和底部  
-    * css 该页面用到的css
+  * home 启动页面，无论如何跳转都会显示的组件  
+    * components 该页面的私有组件
+      * componentA
+        * A.js
+        * A.css
     * index.js 本页面导出的组件
-  * discover 发现音乐页面，包括次级导航路由  
-  * recommend 发现音乐-推荐页面  
+  * discover 发现页面  
+项目较小，所有页面都放在同一级文件夹图省事  
 
 
 │─src  

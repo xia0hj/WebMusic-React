@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./pages/app/index";
-import "./assets/css/common.css";
 
+
+
+import "./assets/css/common.css";
+import App from "./pages/home/index";
 
 
 ReactDOM.render(

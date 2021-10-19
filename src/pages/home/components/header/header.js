@@ -1,7 +1,8 @@
 
-import headerCSS from "./css/header.module.css";
+import headerCSS from "./header.module.css";
 
-import { headerSelectItems } from "../../common/common-data";
+import { headerSelectItems } from "../../../../common/static-data.js";
+
 import { NavLink } from "react-router-dom";
 
 import { Input } from "antd";

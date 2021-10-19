@@ -1,6 +1,6 @@
-import navbarCSS from "./css/navbar.module.css";
+import navbarCSS from "./navbar.module.css";
 
-import { navbarSelectItems } from "../../common/common-data";
+import { navbarSelectItems } from "../../../../common/static-data";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar(){

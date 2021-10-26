@@ -1,7 +1,7 @@
 
 import headerCSS from "./header.module.css";
 
-import { headerSelectItems } from "../../../../common/static-data.js";
+import { headerSelectItems } from "../../../../static/static-data.js";
 
 import { NavLink } from "react-router-dom";
 

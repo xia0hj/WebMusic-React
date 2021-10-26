@@ -1,3 +1,8 @@
+import Banner from "./components/banner/banner.js";
+
 export default function recommend(){
-  return <div>推荐页面</div>;
+
+  return (
+    <Banner></Banner>
+  );
 }

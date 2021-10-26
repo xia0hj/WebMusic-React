@@ -1,6 +1,6 @@
 import footerCSS from "./footer.module.css"
 
-import { footerLinks } from "../../../../common/static-data.js";
+import { footerLinks } from "../../../../static/static-data.js";
 
 export default function footer() {
   return (

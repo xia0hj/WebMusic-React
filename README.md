@@ -19,28 +19,16 @@ npm install --save redux react-redux redux-thunk
   * css 全局css  
 * static 公共静态数据  
 * pages 页面  
-  * home 启动页面，无论如何跳转都会显示的组件  
+  * app 启动页面，无论如何跳转都会显示的组件  
     * components 该页面的私有组件
       * componentA
         * A.js
-        * A.css
+        * A.module.css
     * index.js 本页面导出的组件
   * discover 发现页面  
 项目较小，所有页面都放在同一级文件夹图省事  
 
 
-│─src  
-  ├─assets 存放公共资源css和图片  
-    ├─css  全局css  
-    ├─img  
-  ├─common  公共的一些常量  
-  ├─components 公共组件  
-  ├─pages   路由映射组件  
-  ├─router  前端路由配置  
-  ├─service 网络配置和请求  
-  └─store   全局的store配置  
-  └─utils   工具函数  
-  └─hooks   自定义hook  
 
 
 路由  

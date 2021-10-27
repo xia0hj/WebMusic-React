@@ -13,18 +13,36 @@ const initialState = {
   banner:[],
 }
 
+
+
+/**
+ * @param {object[]} banners
+ * @returns {{type:"get_banner", banner: object[]}}
+ */
+export const getBannerAction = (banners)=>{
+  return {
+    type: "get_banner",
+    banner: banners,
+  }
+};
 const bannerReducer = function(banner=[], action){
   switch(action.type){
-    case "change_banner":
+    case "get_banner":
       return action.banner;
     default:
       return banner;
   }
 }
 
+
+
+
 const rootReducer = combineReducers({
   banner: bannerReducer,
 });
+
+
+
 
 
 const enhancer = compose(
@@ -32,9 +50,4 @@ const enhancer = compose(
   applyMiddleware(thunk),
   DevTools.instrument()
 );
-const store = createStore(rootReducer, initialState, enhancer);
-export default store;
-
-
-
-// store.state = { banner:[] }
+export const store = createStore(rootReducer, initialState, enhancer);

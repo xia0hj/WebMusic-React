@@ -9,7 +9,7 @@ module.exports = {
       '@static': resolve("src/static"),
       "@pages": resolve("src/pages"),
       "@assets": resolve("src/assets"),
-      
+      "@utils": resolve("src/utils"),
     }
   }
 }

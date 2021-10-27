@@ -1,7 +1,7 @@
 
-import headerCSS from "./header.module.css";
+import style from "./Header.module.css";
 
-import { headerSelectItems } from "../../../../static/static-data.js";
+import { headerSelectItems } from "@static/static-data.js";
 
 import { NavLink } from "react-router-dom";
 
@@ -10,14 +10,14 @@ import { Input } from "antd";
 
 
 
-export default function header() {
+export default function Header() {
   return (
-    <div className={headerCSS.headerWrapper}>
-      <div className={headerCSS.content}>
+    <div className={style.headerWrapper}>
+      <div className={style.content}>
 
-        <div className={headerCSS.headerLeft}>
-          <h1><a href="#/" className={headerCSS.logo}>网易云音乐</a></h1>
-          <ul className={headerCSS.headerGroup}>
+        <div className={style.headerLeft}>
+          <h1><a href="#/" className={style.logo}>网易云音乐</a></h1>
+          <ul className={style.headerGroup}>
             {
               headerSelectItems.map((item, index) => {
                 return returnHeaderSelectItem(item, index);
@@ -26,13 +26,13 @@ export default function header() {
           </ul>
         </div>
 
-        <div className={headerCSS.headerRight}>
-          <div className={headerCSS.searchWrapper}>{returnSearchbox()}</div>
-          <a className={headerCSS.creatorCenter} href="www.baidu.com">创作者中心</a>
+        <div className={style.headerRight}>
+          <div className={style.searchWrapper}>{returnSearchbox()}</div>
+          <a className={style.creatorCenter} href="www.baidu.com">创作者中心</a>
         </div>
 
       </div>
-      <div className={headerCSS.redLine} />
+      <div className={style.redLine} />
     </div>
   )
 }
@@ -52,11 +52,11 @@ const returnHeaderSelectItem = (item, index) => {
         <NavLink
           key={index}
           to={item.link}
-          className={headerCSS.headerSelectItem}
-          activeClassName={headerCSS.activeItem}
+          className={style.headerSelectItem}
+          activeClassName={style.activeItem}
         >
           <em>{item.title}</em>
-          <div className={headerCSS.bottomArrowhead}></div>
+          <div className={style.bottomArrowhead}></div>
         </NavLink>
       </li>
     );
@@ -64,7 +64,7 @@ const returnHeaderSelectItem = (item, index) => {
   else if (item.type === "blank") {
     return (
       // target="_blank"表示打开新窗口
-      <a href={item.link} className={headerCSS.headerSelectItem} target="_blank" rel="noreferrer" >{item.title}</a>
+      <a href={item.link} className={style.headerSelectItem} target="_blank" rel="noreferrer" >{item.title}</a>
     );
   }
 };
@@ -73,7 +73,7 @@ const returnHeaderSelectItem = (item, index) => {
 const returnSearchbox = () => {
   return (
     <Input
-      className={headerCSS.searchbox}
+      className={style.searchbox}
       placeholder="音乐/视频/电台/用户"
     />
   );

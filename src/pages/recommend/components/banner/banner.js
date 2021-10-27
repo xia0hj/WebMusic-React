@@ -1,12 +1,11 @@
 
 import { useEffect } from "react";
 import { Carousel } from "antd";
-import bannerCSS from "./banner.module.css";
-import { useSelector, useDispatch } from "react-redux";
-import axiosRequest from "../../../../service/axiosRequest";
-import axios from "axios";
 
-export default function GetBannerComponent(){
+import { useSelector, useDispatch } from "react-redux";
+import axiosRequest from "@service/axiosRequest";
+
+export default function Banner(){
 
   const changeStore = useDispatch();
 

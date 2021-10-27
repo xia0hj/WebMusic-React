@@ -1,8 +1,8 @@
-import NavBar from "./components/navbar/navbar.js";
+import NavBar from "./components/Navbar/Navbar.js";
 
 import { HashRouter, Switch, Route } from "react-router-dom";
 
-import Recommend from "../recommend/index";
+import Recommend from "@pages/recommend/index";
 
 
 export default function discover() {

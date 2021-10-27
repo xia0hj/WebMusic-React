@@ -4,10 +4,11 @@ import { Provider } from "react-redux";
 
 
 
+//import "@assets/css/common.css";
 import "./assets/css/common.css";
-import App from "./pages/home/index";
-import DevTools from "./service/DevTools";
-import store from "./service/store"
+import App from "@pages/app/index";
+import DevTools from "@service/DevTools";
+import store from "@service/store"
 
 ReactDOM.render(
   <React.StrictMode>

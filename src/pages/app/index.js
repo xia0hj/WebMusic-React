@@ -1,7 +1,7 @@
 import { HashRouter, Switch, Route } from "react-router-dom";
 
-import Header from "./components/header/header.js";
-import Footer from "./components/footer/footer.js";
+import Header from "./components/Header/Header.js";
+import Footer from "./components/Footer/Footer.js";
 
 import Discover from "../discover/index"
 

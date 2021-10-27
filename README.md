@@ -9,6 +9,8 @@ TODO
 依赖  
 npm install --save antd
 npm install --save @ant-design/icons  
+npm install --save @craco/craco
+npm install --save redux react-redux redux-thunk
 
 
 项目结构  

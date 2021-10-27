@@ -1,4 +1,4 @@
-import Banner from "./components/banner/banner.js";
+import Banner from "./components/Banner/Banner.js";
 
 export default function recommend(){
 

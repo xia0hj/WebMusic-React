@@ -1,20 +1,20 @@
-import footerCSS from "./footer.module.css"
+import style from "./Footer.module.css"
 
-import { footerLinks } from "../../../../static/static-data.js";
+import { footerLinks } from "@static/static-data.js";
 
-export default function footer() {
+export default function Footer() {
   return (
-    <div className={footerCSS.footerWrapper}>
-      <div className={footerCSS.content}>
+    <div className={style.footerWrapper}>
+      <div className={style.content}>
 
-        <div className={footerCSS.footerLeft}>
-          <p className={footerCSS.footerLink}>{footerLinks.map((item)=>{return returnFooterLinkItem(item)})}</p>
+        <div className={style.footerLeft}>
+          <p className={style.footerLink}>{footerLinks.map((item)=>{return returnFooterLinkItem(item)})}</p>
           <p>网易公司版权所有©1997-2021&nbsp;&nbsp;&nbsp;&nbsp;杭州乐读科技有限公司运营：浙网文[2021] 1186-054号</p>
           <p>违法和不良信息举报电话：0571-89853516&nbsp;&nbsp;&nbsp;&nbsp;举报邮箱：ncm5990@163.com</p>
           <p>粤B2-20090191-18&nbsp;&nbsp;工业和信息化部备案管理系统网站&nbsp;&nbsp;浙公网安备 33010902002564号</p>
         </div>
 
-        <div className={footerCSS.footerRight}>
+        <div className={style.footerRight}>
           
         </div>
 
@@ -33,6 +33,6 @@ export default function footer() {
 const returnFooterLinkItem = (item)=>{
   return [
     <a href={item.link} target="_blank" rel="noreferrer">{item.title}</a>,
-    <span className={footerCSS.splitLine}>|</span>
+    <span className={style.splitLine}>|</span>
   ];
 };

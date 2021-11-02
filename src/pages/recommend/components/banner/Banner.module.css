@@ -1,0 +1,54 @@
+.bannerWrapper{
+  width: 100%;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+  position: relative; /* 如果不加这个属性，子元素中的antd Carousel无法显示 */
+}
+
+.bannerContent{
+  width: 980px;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.bannerLeft{
+  width: 730px;
+}
+.bannerLeft img{
+  width: 100%;
+}
+
+.bannerRight{
+  width: 250px;
+  background-image: url(@assets/img/download.png);
+}
+
+.bannerControl{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 104px;
+  /* transform: translateY(-50%); */
+}
+.bannerControl button{
+  position: absolute;
+  width: 37px;
+  height: 63px;
+  background-image: url(@assets/img/banner_sprite.png);
+  background-color: transparent;
+  cursor: pointer;
+}
+.bannerControl button:nth-child(1){
+  left: -68px;
+  background-position: 0 -360px;
+}
+.bannerControl button:nth-child(2){
+  right: -68px;
+      background-position: 0 -508px;
+}
+.bannerControl button:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}

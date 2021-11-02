@@ -48,17 +48,17 @@ export default function Header() {
 const returnHeaderSelectItem = (item, index) => {
   if (item.type === "route") {
     return (
-      <li>
-        <NavLink
-          key={index}
-          to={item.link}
-          className={style.headerSelectItem}
-          activeClassName={style.activeItem}
-        >
-          <em>{item.title}</em>
-          <div className={style.bottomArrowhead}></div>
-        </NavLink>
-      </li>
+
+      <NavLink
+        key={index}
+        to={item.link}
+        className={style.headerSelectItem}
+        activeClassName={style.activeItem}
+      >
+        <em>{item.title}</em>
+        <div className={style.bottomArrowhead}></div>
+      </NavLink>
+
     );
   }
   else if (item.type === "blank") {

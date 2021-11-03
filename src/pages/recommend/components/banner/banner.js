@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Carousel } from "antd";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -22,11 +22,13 @@ export default function Banner() {
     })
   }, [changeStore]);
 
+  const bannerRef = useRef();
+
   return (
     <div className={style.bannerWrapper}>
       <div className={style.bannerContent}>
         <div className={style.bannerLeft}>
-          <Carousel>
+          <Carousel ref={bannerRef}>
             {useSelector(state => state.banner).map((item, index) => {
               return <img src={item.imageUrl} key={index} alt={item.typeTitle}></img>
             })}
@@ -34,8 +36,8 @@ export default function Banner() {
         </div>
         <a className={style.bannerRight} href="https://d1.music.126.net/dmusic/cloudmusicsetup2.8.0.198822.exe" target="_blank" rel="noreferrer" />
         <div className={style.bannerControl}>
-          <button onClick={()=>console.log("click left")} />
-          <button onClick={()=>console.log("click right")} />
+          <button onClick={()=>bannerRef.current.prev()} />
+          <button onClick={()=>bannerRef.current.next()} />
         </div>
       </div>
 

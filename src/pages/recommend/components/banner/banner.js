@@ -11,6 +11,12 @@ export default function Banner() {
 
   // curIdx = 轮播图当前idx
   const [curIdx, setCurIdx] = useState(0);
+  const changeIdx = (from, to)=>{
+    setCurIdx(to);
+    console.log("changeIdx = "+to);
+  }
+
+
 
   const changeStore = useDispatch();
   useEffect(() => {
@@ -24,12 +30,17 @@ export default function Banner() {
 
   const bannerRef = useRef();
 
+
+  const banners = useSelector(state=>state.banner);
+  const curBgImg = banners && banners[curIdx] && banners[curIdx].imageUrl+'?imageView&blur=40x20';
+
+
   return (
-    <div className={style.bannerWrapper}>
+    <div className={style.bannerWrapper} style={{backgroundImage:{curBgImg}}}>
       <div className={style.bannerContent}>
         <div className={style.bannerLeft}>
-          <Carousel ref={bannerRef}>
-            {useSelector(state => state.banner).map((item, index) => {
+          <Carousel ref={bannerRef} beforeChange={changeIdx} autoplay={true}>
+            {banners.map((item, index) => {
               return <img src={item.imageUrl} key={index} alt={item.typeTitle}></img>
             })}
           </Carousel>
